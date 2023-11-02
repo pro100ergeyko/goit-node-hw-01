@@ -5,7 +5,7 @@ const functionAction = require("./actionTypes");
 
 const program = new Command();
 program
-  .option("-a, --action, <type>", "chose action")
+  .option("-a, --action, <type>", "choose action")
   .option("-i, --id, <type>", "user id")
   .option("-n, --name, <type>", "user name")
   .option("-e, --email, <type>", "user email")
@@ -13,7 +13,7 @@ program
 
 program.parse();
 
-const oprions = program.opts();
+const options = program.opts();
 
 const invokeAction = async ({ action, id, name, email, phone }) => {
   switch (action) {
@@ -37,3 +37,5 @@ const invokeAction = async ({ action, id, name, email, phone }) => {
       console.warn("\x1B[31m Unknown action type!");
   }
 };
+
+invokeAction(options);

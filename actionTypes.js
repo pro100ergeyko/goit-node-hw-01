@@ -10,7 +10,7 @@ const getAllContacts = async () => {
     return;
   }
 
-  console.log(allContacts);
+  console.table(allContacts);
 };
 
 const getContactById = async (id) => {
@@ -20,7 +20,7 @@ const getContactById = async (id) => {
     throw CLIError("Контакти з таким ID відсутні");
   }
 
-  console.log(contactById);
+  console.table(contactById);
 };
 
 const addNewContact = async (data) => {
@@ -40,7 +40,7 @@ const removeContactById = async (id) => {
     throw CLIError("Упс, контактс з вказаним ID - відсутній");
   }
 
-  console.log(contactDelete);
+  console.table(contactDelete);
 };
 
 module.exports = {
