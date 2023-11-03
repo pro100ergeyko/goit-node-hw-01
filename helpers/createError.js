@@ -1,5 +1,5 @@
 const CLIError = (message) => {
-  const error = new Error(massage);
+  const error = new Error(message);
   return error;
 };
 

@@ -37,7 +37,7 @@ const removeContactById = async (id) => {
   const contactDelete = await contacts.removeContact(id);
 
   if (!contactDelete) {
-    throw CLIError("Упс, контактс з вказаним ID - відсутній");
+    throw CLIError("Упс, контакт з вказаним ID - відсутній");
   }
 
   console.table(contactDelete);
